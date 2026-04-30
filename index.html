@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Габдрахманов Тимур - AI Lead / AI Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-gradient-border {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+        }
+        .glass-gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        .neon-glow {
+            box-shadow: 0 0 40px -10px rgba(0, 240, 255, 0.1);
+        }
+        .hover-neon-glow:hover {
+            box-shadow: 0 0 30px -5px rgba(0, 240, 255, 0.2);
+            border-color: rgba(0, 240, 255, 0.3);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed": "#e9ddff",
+                        "on-secondary": "#3c0091",
+                        "on-surface-variant": "#b9cacb",
+                        "surface-container-low": "#1c1b1b",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed": "#002022",
+                        "on-tertiary-fixed-variant": "#554500",
+                        "on-error": "#690005",
+                        "secondary": "#d0bcff",
+                        "on-secondary-container": "#c4abff",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-container": "#00f0ff",
+                        "surface-variant": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-fixed": "#7df4ff",
+                        "on-secondary-fixed-variant": "#5516be",
+                        "tertiary": "#fff5de",
+                        "primary-fixed-dim": "#00dbe9",
+                        "surface-bright": "#3a3939",
+                        "tertiary-fixed-dim": "#eac324",
+                        "surface": "#131313",
+                        "on-secondary-fixed": "#23005c",
+                        "on-primary-container": "#006970",
+                        "error-container": "#93000a",
+                        "primary": "#dbfcff",
+                        "outline-variant": "#3b494b",
+                        "on-surface": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "error": "#ffb4ab",
+                        "outline": "#849495",
+                        "surface-container-highest": "#353534",
+                        "on-tertiary-container": "#715d00",
+                        "surface-tint": "#00dbe9",
+                        "secondary-container": "#571bc1",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed-dim": "#d0bcff",
+                        "inverse-primary": "#006970",
+                        "on-primary": "#00363a",
+                        "tertiary-container": "#fed639",
+                        "tertiary-fixed": "#ffe179",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#3b2f00",
+                        "on-primary-fixed-variant": "#004f54",
+                        "on-tertiary-fixed": "#231b00",
+                        "surface-container-high": "#2a2a2a"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "margin-lg": "64px",
+                        "margin-md": "32px",
+                        "margin-sm": "16px",
+                        "gutter": "24px",
+                        "section-padding": "120px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Space Grotesk", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "display-xl": ["Space Grotesk", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"]
+                    },
+                    fontSize: {
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "label-sm": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "600" }],
+                        "display-xl": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0A0A0A] text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-white/10 shadow-[0_4px_30px_rgba(0,240,255,0.05)] transition-all duration-300 ease-out">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-widest text-primary-container uppercase font-headline-md">
+                AI_LEAD_CORE
+            </div>
+<div class="hidden md:flex space-x-8 items-center font-space-grotesk tracking-tight">
+<a class="text-zinc-400 font-medium transition-all hover:text-cyan-300 hover:bg-white/5 py-2 px-3 rounded-md" href="#expertise">Expertise</a>
+<a class="text-zinc-400 font-medium transition-all hover:text-cyan-300 hover:bg-white/5 py-2 px-3 rounded-md" href="#experience">Experience</a>
+<a class="text-zinc-400 font-medium transition-all hover:text-cyan-300 hover:bg-white/5 py-2 px-3 rounded-md" href="#tools">Tools</a>
+<a class="text-zinc-400 font-medium transition-all hover:text-cyan-300 hover:bg-white/5 py-2 px-3 rounded-md" href="#strengths">Strengths</a>
+<a class="text-zinc-400 font-medium transition-all hover:text-cyan-300 hover:bg-white/5 py-2 px-3 rounded-md" href="#contact">Contact</a>
+</div>
+<a class="hidden md:flex items-center space-x-2 bg-primary-container text-black px-6 py-2.5 rounded-sm font-label-sm uppercase transition-all hover:bg-primary-fixed hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">download</span>
+<span>Download CV</span>
+</a>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="max-w-[1200px] mx-auto px-6 md:px-8 pt-32 pb-section-padding">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col md:flex-row items-center justify-center gap-16 py-20 relative">
+<!-- Decorative Ambient Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-container rounded-full opacity-[0.03] blur-[100px] pointer-events-none"></div>
+<div class="flex-1 space-y-8 z-10">
+<div class="space-y-4">
+<h2 class="font-label-sm text-primary-container uppercase tracking-widest flex items-center gap-4">
+<span class="w-12 h-[1px] bg-primary-container/50"></span>
+                        AI Lead / AI Engineer
+                    </h2>
+<h1 class="font-display-xl text-white">
+                        Габдрахманов<br/>Тимур
+                    </h1>
+</div>
+<p class="font-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+                    Проектирование и внедрение AI-агентов, LLM и RAG-систем. Превращаю сложные технологические концепции в работающие бизнес-решения и автоматизированные процессы.
+                </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<a class="bg-primary-container text-black px-8 py-4 rounded-sm font-label-sm uppercase transition-all hover:bg-primary-fixed hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] flex items-center gap-2" href="https://t.me/Tim_Gambi" target="_blank">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                        Связаться в Telegram
+                    </a>
+<a class="glass-panel text-white px-8 py-4 rounded-sm font-label-sm uppercase transition-all hover:bg-white/10 flex items-center gap-2 border border-white/10 hover:border-white/30" href="#experience">
+                        Посмотреть опыт
+                    </a>
+</div>
+<div class="flex items-center gap-8 pt-8 border-t border-white/10">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-primary-container text-sm">alternate_email</span>
+                        volf-88@yandex.ru
+                    </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="material-symbols-outlined text-primary-container text-sm">location_on</span>
+                        Калининград
+                    </div>
+</div>
+</div>
+<div class="flex-1 w-full max-w-md relative z-10">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden glass-gradient-border p-2 neon-glow">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/20 to-transparent mix-blend-overlay z-10 pointer-events-none"></div>
+<img alt="Portrait of Timur" class="w-full h-full object-cover rounded-lg filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sleek, high-end professional portrait of an AI Lead Engineer set against a minimalist, dark studio background with subtle neon blue rim lighting. The subject exudes confidence and technical expertise, framed elegantly with a soft, ambient glow reflecting off glass-like elements in the periphery. The overall aesthetic is 'Clean-Tech', balancing dark moody tones with sharp, pristine light highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgr5KyI3A-bJIXM1j0KyEXLi1rGkmbiqENLE-i-8ES6fGXnIUnguaUsWci2eVnCbr3_6OTp3m1_I-496Pz-oTq0BdrhpFiUoXeqfiZ50w9E1ks3tI7JjeoQbqEktaJCinPV6JZpObhVJg-t7VW3o4VAaIGwMwhbLxMqb863eGjjzM_iHiW2z5q3IHKUzkYY9k0iJj-clITagdvA6qvO0KsDtAa7PS3pEOeb1yO3CkXXmGn8XF8Jm7q00Va-4j71tEA1EtDb4mwv7k"/>
+</div>
+<!-- Decorative Circuit Line -->
+<div class="absolute -right-8 top-1/4 w-[100px] h-[1px] bg-white/20 hidden md:block">
+<div class="absolute right-0 -top-[2px] w-[5px] h-[5px] bg-primary-container"></div>
+</div>
+</div>
+</section>
+<!-- Expertise Section -->
+<section class="py-section-padding relative" id="expertise">
+<div class="flex items-center gap-4 mb-margin-lg">
+<span class="font-label-sm text-primary-container uppercase tracking-widest">01. Области экспертизы</span>
+<div class="h-[1px] flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 group-hover:scale-110 transition-transform">smart_toy</span>
+<h3 class="font-headline-md text-white mb-4 text-2xl">AI Agents</h3>
+<p class="font-body-md text-on-surface-variant">Разработка автономных агентов для решения комплексных бизнес-задач и автоматизации рутины.</p>
+</div>
+<!-- Card 2 -->
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 group-hover:scale-110 transition-transform">psychology</span>
+<h3 class="font-headline-md text-white mb-4 text-2xl">LLM Опыт</h3>
+<p class="font-body-md text-on-surface-variant">Глубокая интеграция и настройка моделей OpenAI, Claude, Llama для специфических нужд.</p>
+</div>
+<!-- Card 3 -->
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 group-hover:scale-110 transition-transform">database</span>
+<h3 class="font-headline-md text-white mb-4 text-2xl">RAG Системы</h3>
+<p class="font-body-md text-on-surface-variant">Создание интеллектуальных баз знаний с использованием векторного поиска и Retrieval-Augmented Generation.</p>
+</div>
+<!-- Card 4 -->
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 group-hover:scale-110 transition-transform">api</span>
+<h3 class="font-headline-md text-white mb-4 text-2xl">Python / API</h3>
+<p class="font-body-md text-on-surface-variant">Разработка надежных бэкенд-решений и интеграция сторонних сервисов через RESTful API.</p>
+</div>
+<!-- Card 5 -->
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 group-hover:scale-110 transition-transform">account_tree</span>
+<h3 class="font-headline-md text-white mb-4 text-2xl">Интеграции</h3>
+<p class="font-body-md text-on-surface-variant">Связывание систем через n8n, CRM-интеграции для создания бесшовных рабочих процессов.</p>
+</div>
+<!-- Card 6 -->
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300 group">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6 group-hover:scale-110 transition-transform">rocket_launch</span>
+<h3 class="font-headline-md text-white mb-4 text-2xl">MVP Прототипирование</h3>
+<p class="font-body-md text-on-surface-variant">Быстрый запуск минимально жизнеспособных продуктов для проверки AI-гипотез.</p>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-section-padding relative" id="experience">
+<div class="flex items-center gap-4 mb-margin-lg">
+<span class="font-label-sm text-primary-container uppercase tracking-widest">02. Опыт</span>
+<div class="h-[1px] flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
+</div>
+<div class="relative max-w-4xl mx-auto space-y-12 before:absolute before:inset-0 before:ml-5 md:before:ml-[28px] before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary-container/80 before:via-white/10 before:to-transparent">
+<!-- Experience 1 -->
+<div class="relative pl-16 md:pl-24 group">
+<div class="absolute left-0 md:left-2 top-2 flex items-center justify-center w-10 h-10 rounded-full bg-[#131313] border border-primary-container text-primary-container shadow-[0_0_15px_rgba(0,240,255,0.3)] z-10 group-hover:bg-primary-container group-hover:text-black transition-all duration-300">
+<span class="material-symbols-outlined text-xl">memory</span>
+</div>
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+<h3 class="font-headline-md text-white text-2xl">Автоматизация бизнес-процессов, проектная работа, фриланс</h3>
+<span class="font-label-sm text-primary-container uppercase tracking-widest shrink-0">Июнь 2018 — Настоящее время</span>
+</div>
+<div class="font-label-sm text-white/60 uppercase tracking-widest mb-4">AI Engineer</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Проектировка и внедрение AI-агентов, LLM-based решения, структурированный вывод JSON/XML, RAG-системы, интеграции (CRM, Telegram, n8n), прототипы MVP, оптимизация стоимости.</p>
+</div>
+</div>
+<!-- Experience 2 -->
+<div class="relative pl-16 md:pl-24 group">
+<div class="absolute left-0 md:left-2 top-2 flex items-center justify-center w-10 h-10 rounded-full bg-[#131313] border border-white/20 text-white/60 z-10 group-hover:border-primary-container group-hover:text-primary-container transition-all duration-300">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+</div>
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+<h3 class="font-headline-md text-white text-2xl">Next Genium</h3>
+<span class="font-label-sm text-primary-container uppercase tracking-widest shrink-0">Октябрь 2025 — Апрель 2026</span>
+</div>
+<div class="font-label-sm text-white/60 uppercase tracking-widest mb-4">Проектный руководитель</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Постановка задач маркетингу и автоматизации, архитектура AI-решений, интеграция с Unreal Engine и Godot, обучение сотрудников, контроль креативов и метрик.</p>
+</div>
+</div>
+<!-- Experience 3 -->
+<div class="relative pl-16 md:pl-24 group">
+<div class="absolute left-0 md:left-2 top-2 flex items-center justify-center w-10 h-10 rounded-full bg-[#131313] border border-white/20 text-white/60 z-10 group-hover:border-primary-container group-hover:text-primary-container transition-all duration-300">
+<span class="material-symbols-outlined text-xl">directions_car</span>
+</div>
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+<h3 class="font-headline-md text-white text-2xl">ООО "Эйдос Инновации"</h3>
+<span class="font-label-sm text-primary-container uppercase tracking-widest shrink-0">Март 2015 — Ноябрь 2016</span>
+</div>
+<div class="font-label-sm text-white/60 uppercase tracking-widest mb-4">Проектный менеджер</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Проект по беспилотному транспорту, дорожные карты, управление командой, переговоры, контроль документации.</p>
+</div>
+</div>
+<!-- Experience 4 -->
+<div class="relative pl-16 md:pl-24 group">
+<div class="absolute left-0 md:left-2 top-2 flex items-center justify-center w-10 h-10 rounded-full bg-[#131313] border border-white/20 text-white/60 z-10 group-hover:border-primary-container group-hover:text-primary-container transition-all duration-300">
+<span class="material-symbols-outlined text-xl">account_tree</span>
+</div>
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+<h3 class="font-headline-md text-white text-2xl">ГУП РТ "Центр информационных технологий"</h3>
+<span class="font-label-sm text-primary-container uppercase tracking-widest shrink-0">Ноябрь 2011 — Апрель 2012</span>
+</div>
+<div class="font-label-sm text-white/60 uppercase tracking-widest mb-4">Проектный менеджер</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">Автоматизация процессов, проектная документация, визуализация ИТ-инфраструктуры, планирование в MS Project, база знаний.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stack & Tools Section -->
+<section class="py-section-padding relative" id="tools">
+<div class="flex items-center gap-4 mb-margin-lg">
+<span class="font-label-sm text-primary-container uppercase tracking-widest">03. Стек и инструменты</span>
+<div class="h-[1px] flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="glass-gradient-border rounded-xl p-8">
+<h3 class="font-headline-md text-white mb-6 text-xl">AI / LLM</h3>
+<div class="flex flex-wrap gap-3">
+<span class="bg-primary-container/10 text-primary-container border border-primary-container/20 px-3 py-1.5 rounded-full font-label-sm">OpenAI</span>
+<span class="bg-primary-container/10 text-primary-container border border-primary-container/20 px-3 py-1.5 rounded-full font-label-sm">Claude</span>
+<span class="bg-primary-container/10 text-primary-container border border-primary-container/20 px-3 py-1.5 rounded-full font-label-sm">Gemini</span>
+<span class="bg-primary-container/10 text-primary-container border border-primary-container/20 px-3 py-1.5 rounded-full font-label-sm">open-source LLM</span>
+<span class="bg-primary-container/10 text-primary-container border border-primary-container/20 px-3 py-1.5 rounded-full font-label-sm">RAG</span>
+<span class="bg-primary-container/10 text-primary-container border border-primary-container/20 px-3 py-1.5 rounded-full font-label-sm">AI Agents</span>
+<span class="bg-primary-container/10 text-primary-container border border-primary-container/20 px-3 py-1.5 rounded-full font-label-sm">Prompt Engineering</span>
+<span class="bg-primary-container/10 text-primary-container border border-primary-container/20 px-3 py-1.5 rounded-full font-label-sm">Guardrails</span>
+</div>
+</div>
+<div class="glass-gradient-border rounded-xl p-8">
+<h3 class="font-headline-md text-white mb-6 text-xl">Backend / Automation</h3>
+<div class="flex flex-wrap gap-3">
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Python</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">API</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Webhooks</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">n8n</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">SQL</span>
+</div>
+</div>
+<div class="glass-gradient-border rounded-xl p-8">
+<h3 class="font-headline-md text-white mb-6 text-xl">Интеграции</h3>
+<div class="flex flex-wrap gap-3">
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Telegram Bots</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">CRM</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Google Sheets</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Notion</span>
+</div>
+</div>
+<div class="glass-gradient-border rounded-xl p-8">
+<h3 class="font-headline-md text-white mb-6 text-xl">Project / Product</h3>
+<div class="flex flex-wrap gap-3">
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Jira</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Trello</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Agile Project Management</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Документация</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Постановка задач</span>
+</div>
+</div>
+<div class="glass-gradient-border rounded-xl p-8">
+<h3 class="font-headline-md text-white mb-6 text-xl">GameDev</h3>
+<div class="flex flex-wrap gap-3">
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Unity 2D</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Game Maker</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Unreal Engine</span>
+<span class="bg-white/5 text-white border border-white/10 px-3 py-1.5 rounded-full font-label-sm">Godot</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Strengths Section -->
+<section class="py-section-padding relative" id="strengths">
+<div class="flex items-center gap-4 mb-margin-lg">
+<span class="font-label-sm text-primary-container uppercase tracking-widest">04. Сильные стороны</span>
+<div class="h-[1px] flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="glass-panel rounded-xl p-6 hover-neon-glow transition-all duration-300 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">hub</span>
+<p class="font-body-md text-white leading-relaxed">Соединение AI, продукта и бизнеса</p>
+</div>
+<div class="glass-panel rounded-xl p-6 hover-neon-glow transition-all duration-300 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">speed</span>
+<p class="font-body-md text-white leading-relaxed">Быстрое прототипирование решений</p>
+</div>
+<div class="glass-panel rounded-xl p-6 hover-neon-glow transition-all duration-300 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">architecture</span>
+<p class="font-body-md text-white leading-relaxed">Умение переводить требования заказчика в архитектуру</p>
+</div>
+<div class="glass-panel rounded-xl p-6 hover-neon-glow transition-all duration-300 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">groups</span>
+<p class="font-body-md text-white leading-relaxed">Опыт управления командами и задачами</p>
+</div>
+<div class="glass-panel rounded-xl p-6 hover-neon-glow transition-all duration-300 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">lightbulb</span>
+<p class="font-body-md text-white leading-relaxed">Креативное мышление и системный подход</p>
+</div>
+<div class="glass-panel rounded-xl p-6 hover-neon-glow transition-all duration-300 flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container mt-1">explore</span>
+<p class="font-body-md text-white leading-relaxed">Глубокое погружение в новые технологии</p>
+</div>
+</div>
+</section>
+<!-- Education & Certificates Section -->
+<section class="py-section-padding relative" id="education">
+<div class="flex items-center gap-4 mb-margin-lg">
+<span class="font-label-sm text-primary-container uppercase tracking-widest">05. Образование и сертификаты</span>
+<div class="h-[1px] flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300">
+<h3 class="font-headline-md text-white mb-6 text-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container">school</span>
+                Образование
+            </h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm mt-1">arrow_right</span>
+<div>
+<div class="font-body-md text-white font-medium">Казанский государственный финансово-экономический институт</div>
+<div class="font-label-sm text-on-surface-variant mt-1">Менеджмент</div>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm mt-1">arrow_right</span>
+<div>
+<div class="font-body-md text-white font-medium">Московский государственный университет экономики, статистики и информатики (МЭСИ)</div>
+<div class="font-label-sm text-on-surface-variant mt-1">Маркетинг</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="glass-gradient-border rounded-xl p-8 hover-neon-glow transition-all duration-300">
+<h3 class="font-headline-md text-white mb-6 text-xl flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container">workspace_premium</span>
+                Сертификаты
+            </h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm mt-1">verified</span>
+<div class="font-body-md text-white">Bothelp <span class="text-on-surface-variant text-sm">— Автоматизация продаж</span></div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm mt-1">verified</span>
+<div class="font-body-md text-white">Bothelp <span class="text-on-surface-variant text-sm">— Партнёр платформы</span></div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-container text-sm mt-1">verified</span>
+<div class="font-body-md text-white">ICAgile Certified Professional <span class="text-on-surface-variant text-sm">— Agile Team Facilitation</span></div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="py-section-padding relative" id="about">
+<div class="flex items-center gap-4 mb-margin-lg">
+<span class="font-label-sm text-primary-container uppercase tracking-widest">06. Обо мне</span>
+<div class="h-[1px] flex-1 bg-gradient-to-r from-white/20 to-transparent"></div>
+</div>
+<div class="glass-panel rounded-xl p-8 md:p-12 relative overflow-hidden group hover-neon-glow transition-all duration-300">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full blur-3xl group-hover:bg-primary-container/10 transition-colors duration-700 pointer-events-none"></div>
+<span class="material-symbols-outlined text-primary-container/20 text-6xl absolute right-8 bottom-8 pointer-events-none">fingerprint</span>
+<p class="font-body-lg text-white/90 leading-relaxed max-w-4xl relative z-10">
+            Люблю технологии, творчество, музыку, боевые искусства, психологию, путешествия и саморазвитие. Глубоко погружаюсь в интересные задачи, быстро осваиваю новые навыки и постоянно отслеживаю развитие AI-инструментов. Сейчас занимаюсь разработкой полностью автоматического цикла создания 2D-игр в Unity.
+        </p>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-section-padding relative" id="contact">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary-container rounded-[100%] opacity-[0.02] blur-[100px] pointer-events-none"></div>
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto space-y-8 z-10 relative">
+<h2 class="font-display-xl text-white text-4xl md:text-5xl leading-tight">Готов обсудить AI-автоматизацию, MVP или роль AI Lead</h2>
+<p class="font-body-md text-on-surface-variant text-lg">Открыт к удалённой работе, проектной занятости и задачам на стыке AI, автоматизации, продукта и разработки.</p>
+<div class="flex flex-wrap justify-center gap-6 pt-6">
+<a class="bg-primary-container text-black px-8 py-4 rounded-sm font-label-sm uppercase transition-all hover:bg-primary-fixed hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] flex items-center gap-2" href="https://t.me/Tim_Gambi" target="_blank">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                Написать в Telegram
+            </a>
+<a class="glass-panel text-white px-8 py-4 rounded-sm font-label-sm uppercase transition-all hover:bg-white/10 flex items-center gap-2 border border-white/10 hover:border-white/30" href="mailto:volf-88@yandex.ru">
+<span class="material-symbols-outlined">mail</span>
+                Отправить email
+            </a>
+</div>
+<div class="flex flex-wrap justify-center gap-8 pt-12 border-t border-white/10 w-full mt-12">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="text-primary-container">Telegram:</span> @Tim_Gambi
+            </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="text-primary-container">Email:</span> volf-88@yandex.ru
+            </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm">
+<span class="text-primary-container">VK:</span> vk.com/tim_gambi
+            </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full border-t border-white/5 py-12 bg-zinc-950/90 backdrop-blur-md">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-8 max-w-7xl mx-auto">
+<div class="text-lg font-black text-white font-space-grotesk tracking-widest uppercase">
+                AI_LEAD_CORE
+            </div>
+<div class="flex space-x-6 text-sm uppercase tracking-widest font-space-grotesk">
+<a class="text-zinc-500 hover:text-cyan-400 transition-colors scale-105 transition-transform" href="#">LinkedIn</a>
+<a class="text-zinc-500 hover:text-cyan-400 transition-colors scale-105 transition-transform" href="#">GitHub</a>
+<a class="text-zinc-500 hover:text-cyan-400 transition-colors scale-105 transition-transform" href="#">ResearchGate</a>
+</div>
+<div class="text-zinc-500 text-sm font-label-sm">
+                © 2024 AI Lead Specialist. Built for the high-end technical specialist.
+            </div>
+</div>
+</footer>
+</body></html>
